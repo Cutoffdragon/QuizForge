@@ -1,0 +1,263 @@
+.App {
+  text-align: center;
+  cursor: default;
+}
+
+body {
+  background-image: url('https://img.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg');
+  background-size: cover;
+}
+
+.homeDiv {
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  font-size: 40px;
+  font-family: 'harrington', fantasy;
+  color: orangered;
+  position: sticky;
+}
+
+.question {
+  padding: 0px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.answers {
+  padding: 7px;
+  width: 75%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  font-size: 19px;
+  padding: 5px;
+}
+
+.list {
+  padding: 10px;
+  font-family: "bradley hand", cursive;
+  color: white;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+.list:hover {
+  transform: scale(1.1);
+  color: rgb(222, 37, 37);
+  cursor: pointer;
+}
+
+.animated {
+  animation: fadeIn 2s;
+}
+
+.results-div {
+  padding: 20px;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.action-button {
+  border: 2px solid black;
+  padding: 7px;
+  width: 200px;
+  height: 70px;
+  background-color: orangered;
+  color: white;
+  font-size: 30px;
+  font-family: Optima, sans-serif;
+  font-weight: bold;
+  border-radius: 40px;
+  margin: 30px;
+  opacity: 0.5;
+  transition: 0.3s;
+  position: static;
+}
+
+.radio-button {
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: green;
+  transform: scale(1.1);
+}
+
+#quiz-title{
+  color: orangered;
+  font-size: 90px;
+  font-family: 'Optima', sans-serif;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.sub-header {
+  color: rgb(64, 141, 242);
+  font-size: 32px;
+  font-family: Optima, sans-serif;
+  margin-bottom: 20px;
+}
+
+.quizLink {
+  color:rgb(74, 140, 255);
+  transition: all 0.2s;
+  font-size: 1.5em;
+}
+
+.quizLink:hover {
+  color: green;
+}
+
+#quizList {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+
+}
+
+#instructionSpan {
+  color: orangered;
+  font-family: "harrington", fantasy;
+}
+
+.main-input {
+  width: 300px;
+  height: 45px;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 13px;
+  margin: 20px;
+  transition: all 0.1s ease-out;
+}
+
+.main-input:hover,
+.main-input:focus {
+    background-color: rgb(74, 140, 255);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.main-input2 {
+  width: 100px;
+  height: 45px;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 13px;
+  margin: 20px;
+  transition: all 0.1s ease-out;
+}
+
+.main-input2:hover,
+.main-input2:focus {
+    background-color: rgb(74, 140, 255);
+    font-weight: bold;
+    width: 120px;
+}
+
+.main-textarea {
+  width: 300px;
+  height: 120px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 13px;
+  margin: 20px;
+  transition: all 0.1s ease-out;
+}
+
+.main-textarea:hover,
+.main-textarea:focus {
+    background-color: rgb(74, 140, 255);
+    font-weight: bold;
+    width: 320px;
+}
+
+.remove-button {
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  border-radius: 160px;
+  border: 2px solid black;
+  background-color: rgb(74, 140, 255);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.remove-button:hover,
+.remove-button:focus {
+    background-color: rgb(225, 43, 43);
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  
+  body {
+    background-image: none;
+    background: linear-gradient(90deg, rgba(0,39,121,1) 0%, rgba(8,18,33,1) 29%);
+
+  }
+
+  #quizList {
+    display: block;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  #quizList {
+    justify-content: start;
+  }
+
+  .homeDiv {
+    flex-direction: column;
+  }
+
+  #quiz-title {
+    font-size: 50px;
+  }
+
+  .main-input {
+    font-size: 15px;
+  }
+}
