@@ -2,7 +2,7 @@
 FROM node:14 AS build
 
 # Set the working directory in the container
-WORKDIR /src
+WORKDIR /
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the build output to Nginx’s HTML directory
-COPY --from=build ./build /usr/share/nginx/html
+COPY --from=build /build /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
