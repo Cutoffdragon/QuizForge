@@ -1,0 +1,19 @@
+{
+    "services": {
+      "client": {
+        "build": {
+          "dockerfile": "client/Dockerfile",
+          "context": "client"
+        },
+        "start": "npm start"
+      },
+      "server": {
+        "build": {
+          "dockerfile": "server/Dockerfile",
+          "context": "server"
+        },
+        "start": "npm start"
+      }
+    }
+  }
+  
