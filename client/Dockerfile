@@ -22,8 +22,8 @@ FROM nginx:alpine
 # Copy the build output to Nginx’s HTML directory
 COPY --from=build /build /usr/share/nginx/html
 
-# Expose port 80
-EXPOSE 80
+# Expose port 3000
+EXPOSE 3000
 
 # Start Nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]
