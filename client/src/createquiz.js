@@ -64,7 +64,7 @@ export default function CreateQuiz() {
         try {
             const body = quizObject;
             setPhaseState(5);
-            const response = await fetch("http://localhost:8080/quizinfo", {
+            const response = await fetch(process.env.SOURCE_SITE + "/quizinfo", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -79,10 +79,10 @@ export default function CreateQuiz() {
     const getQuizId = async () => {
         try {
             const query = setQuizName[0]['quizName'].replace(' ', '+')
-            const response = await fetch(`http://localhost:8080/quizid?quizname=${query}`)
+            const response = await fetch(process.env.SOURCE_SITE+ `/quizid?quizname=${query}`)
             const results = await response.json();
             console.log(results);
-            window.location = `http://localhost:3000/${results['quizId']}`
+            window.location = process.env.CLIENT_SITE + `/${results['quizId']}`
         } catch (err) {
             console.error(err.message);
             window.location = '/error'

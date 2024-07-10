@@ -8,7 +8,7 @@ export default function QuizList(props) {
   const populateQuizzes = async () => {
     try {
       const quizParam = quizQuery.replace(' ', '+')
-      const response = await fetch(`http://localhost:8080/populatequizzes?query=${quizParam}`);
+      const response = await fetch(process.env.SOURCE_SITE + `/populatequizzes?query=${quizParam}`);
       const results = await response.json();
       console.log(results);
       setQuizzes(results['rows']);
