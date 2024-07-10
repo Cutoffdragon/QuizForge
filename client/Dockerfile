@@ -22,7 +22,7 @@ FROM nginx:alpine
 # Copy the build output to Nginx’s HTML directory
 COPY --from=build /build /usr/share/nginx/html
 
-COPY nginx.conf /nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 3000
 EXPOSE 3000
