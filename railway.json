@@ -5,7 +5,7 @@
           "dockerfile": "client/Dockerfile",
           "context": "client"
         },
-        "start": "npm start"
+        "start": "npm run start"
       },
       "server": {
         "build": {

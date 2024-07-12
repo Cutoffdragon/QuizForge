@@ -5,7 +5,7 @@ export default function QuizList(props) {
   const [quizzes, setQuizzes] = useState([]);
   const [quizQuery, setQuizQuery] = useState('')
 
-  const populateQuizzes = async () => {
+  const populateQuizzes = async() => {
     try {
       const quizParam = quizQuery.replace(' ', '+')
       const response = await fetch(process.env.SOURCE_SITE + `/populatequizzes?query=${quizParam}`);
