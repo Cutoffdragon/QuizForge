@@ -21,5 +21,5 @@ export default function Quiz() {
 
 export const quizLoader = async ({ params }) => {
   const query = params['id']
-  return await fetch(process.env.SOURCE_SITE + `/quizinfo?id=${query}`);
+  return await fetch(process.env.REACT_APP_SOURCE_SITE + `/quizinfo?id=${query}`);
 }
