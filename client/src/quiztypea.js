@@ -41,7 +41,7 @@ export default function QuizTypeA(props) {
     }
 
     return (
-        <div className="App d-flex flex-column align-items-center justify-content-center quiz">
+        <div className="App d-flex flex-column align-items-center justify-content-center">
             {showResults === 2 ? (
                 <div className="results-div">
                     <h3 className="display-1 fw-bold text-primary animated mt-5 ">Your Result is...</h3>
