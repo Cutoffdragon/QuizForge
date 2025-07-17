@@ -263,6 +263,10 @@ ul {
 
 @media (max-width: 600px) {
 
+  .quiz {
+    min-height: 100vh;
+  }
+
   .heroText {
     margin: 0px;
   }
