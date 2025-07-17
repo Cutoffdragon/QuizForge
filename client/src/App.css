@@ -31,7 +31,7 @@ a {
 
 #header {
   font-size: 40px;
-  font-family: 'harrington', fantasy;
+  font-family: 'Optima', sans-serif;
   color: orangered;
   position: sticky;
   top: 10;
@@ -64,9 +64,9 @@ ul {
 
 .list {
   padding: 10px;
-  font-family: "bradley hand", cursive;
+  font-family: 'Optima', sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: clamp(1rem,1.6vw,1.125rem);
   transition: 0.5s;
 }
 
