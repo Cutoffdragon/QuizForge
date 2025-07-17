@@ -3,13 +3,26 @@
   cursor: default;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
 body {
   background-image: url('https://img.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .homeDiv {
   flex-direction: row;
+}
+
+.quiz {
+  min-height: 75vh;
 }
 
 a {
@@ -21,6 +34,12 @@ a {
   font-family: 'harrington', fantasy;
   color: orangered;
   position: sticky;
+  top: 10;
+}
+
+.heroText {
+  font-size: clamp(1.75rem,3vw,3.5rem);
+  margin: 50px;
 }
 
 .question {
@@ -230,11 +249,7 @@ ul {
 
 @media (max-width: 1100px) {
   
-  body {
-    background-image: none;
-    background: linear-gradient(90deg, rgba(0,39,121,1) 0%, rgba(8,18,33,1) 29%);
 
-  }
 
   #quizList {
     display: block;
@@ -244,6 +259,10 @@ ul {
 }
 
 @media (max-width: 600px) {
+
+  .heroText {
+    margin: 0px;
+  }
 
   #quizList {
     justify-content: start;

@@ -5,7 +5,7 @@ export default function Instructions() {
     const [phaseState, setPhaseState] = useState(0);
 
     return (
-        <>
+        <div className="d-flex flex-column align-items-center justify-content-center quiz">
             {phaseState === 0 ? (
                 <div className='m-3 d-flex flex-column align-items-center'>
                     <h1 className='text-center text-primary mt-2 display-2 fw-bold'>Build a Quiz with <span id='instructionSpan'>QuizForge</span></h1>
@@ -39,6 +39,6 @@ export default function Instructions() {
                     <h1 className='text-center text-primary m-5 display-3 fw-bold'>Now you are ready to build a quiz! Take your time, and have fun!</h1>
                 </div>
             )}
-        </>
+        </div>
     )
 }

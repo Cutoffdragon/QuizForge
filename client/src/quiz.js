@@ -9,7 +9,7 @@ export default function Quiz() {
   //Generate question card or results card
   return (
     <div className='App'>
-      <a href='/'><h1 className='mb-5 text-center fw-bold' id='header'>QuizForge</h1></a>
+      <a href='/'><h1 className=' text-center fw-bold' id='header'>QuizForge</h1></a>
       {quizCredentials['credentials']['quizType'] === 'A' ? (
         <QuizTypeA quizName={quizCredentials['credentials']['quizName']} creatorName={quizCredentials['credentials']['creatorName']} description={quizCredentials['credentials']['quizDescription']} questions={quizCredentials['questions']} />
       ) : (
