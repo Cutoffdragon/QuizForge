@@ -264,7 +264,7 @@ ul {
 @media (max-width: 600px) {
 
   .quiz {
-    min-height: 130vh;
+    height: auto;
   }
 
   .heroText {
