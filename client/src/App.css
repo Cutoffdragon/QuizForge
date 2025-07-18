@@ -55,7 +55,6 @@ a {
 .answers {
   padding: 7px;
   width: 75%;
-  height: 300px;
   margin: 0 auto;
 }
 
@@ -262,10 +261,6 @@ ul {
 }
 
 @media (max-width: 600px) {
-
-  .quiz {
-    height: auto;
-  }
 
   .heroText {
     margin: 0px;
