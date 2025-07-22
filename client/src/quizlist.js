@@ -5,7 +5,7 @@ export default function QuizList(props) {
   const [quizzes, setQuizzes] = useState([]);
   const [quizQuery, setQuizQuery] = useState('')
 
-  const populateQuizzes = async() => {
+  const populateQuizzes = async () => {
     try {
       const quizParam = quizQuery.replace(' ', '+')
       const response = await fetch(process.env.REACT_APP_SOURCE_SITE + `/populatequizzes?query=${quizParam}`);
@@ -19,11 +19,12 @@ export default function QuizList(props) {
 
   useEffect(() => {
     populateQuizzes();
-    window.addEventListener('load', populateQuizzes());
+    window.addEventListener('load', populateQuizzes);
     return () => {
-      window.removeEventListener('load', populateQuizzes());
+      window.removeEventListener('load', populateQuizzes);
     };
   }, []);
+
 
   const handleQuery = (e) => {
     const { value } = e.target;
@@ -41,7 +42,7 @@ export default function QuizList(props) {
             <h4 className='fs-4 text-white'>By {result['creator_name']}</h4>
           </div>
         ))}
-        { quizzes.length == 0 && (
+        {quizzes.length == 0 && (
           <h3 className="my-5 ext-center heroText fw-bold text-white m-1 animated">Sorry, there are no Quizzes available. Please try again.</h3>
         )}
       </div>
